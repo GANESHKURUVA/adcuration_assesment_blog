@@ -1,0 +1,43 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+<title>Insert</title>
+{% endblock %}
+
+
+
+
+
+{% block body_block %}
+<body>
+    <style>
+        #one
+    {
+        border-radius:0px 10px 0px 10px ;
+        background: linear-gradient(to right,red,black);
+        color: whitesmoke;
+        font-size: 20px;
+        padding:2px;
+        width: 150px;
+    
+    
+    }
+    body{
+        background-image: url('https://wallpapercave.com/wp/wp2775306.jpg');
+        background-size: cover;
+    }
+    </style>
+    
+
+    <center>
+        <h1>INSERT_DATA_HERE</h1>
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{CFO.as_p}}
+        <input type="submit" value="Insert" class="one">
+        </form>
+        
+       
+    </center>
+    </body>
+{% endblock %}

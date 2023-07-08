@@ -1,0 +1,59 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+<title>RIGISTRATION</title>
+{% endblock %}
+
+{% block body_block %}
+<style>
+h1
+{
+    background-color: aqua;
+}
+form
+{
+    background-color: rgba(28, 26, 190, 0.408);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    height: 420px;
+    width: 300px;
+    font-size: 20px;
+}
+input
+{
+    border-radius: 5px;
+}
+#one
+{
+    border-radius:0px 10px 0px 10px ;
+    background: linear-gradient(to right,red,black);
+    color: whitesmoke;
+    font-size: 20px;
+    padding:2px;
+    width: 150px;
+
+
+}
+body{
+    background-image: url('https://image.shutterstock.com/z/stock-photo-woman-hand-pressing-social-media-icon-on-blue-background-with-world-map-132469673.jpg');
+}
+
+</style>
+<body>
+    
+
+    <center>
+        <h1>REGISTER-HERE</h1>
+
+
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            {{UFO.as_p}}
+            <input type="submit" value="Register" id="one" >
+
+            
+        </form>
+    </center>
+</body>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+<title>LIST</title>
+{% endblock %}
+
+{% block body_block %}
+<style>
+
+    h5
+    {
+        background-color: red;
+    }
+    img{
+        
+        width: 320px;
+        height: 300px;
+        
+    }
+    
+    body{
+        background-image: url('https://th.bing.com/th/id/R.c734d16472409df22ecfca97d99d6691?rik=GkINbMARksKu7w&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f08%2fDesktop-Best-And-Website-background-2560x1600.jpg&ehk=PRvGxoU3%2f8bAVsH7JxbdDMfS8ui%2byLZy1wPVmNY2Rzs%3d&risl=&pid=ImgRaw&r=0');
+        background-size: cover;
+    }
+    a{
+        color: rgb(224, 22, 100);
+        
+    }
+    h2:hover{
+        background: linear-gradient(to right,rgb(11, 211, 61),black);
+    }
+
+</style>
+<body>
+<br> <br>
+<div class="container mt-3">
+    <div class="row">
+        {% for i in data %}
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <img src="{{i.photo}}" alt="NO-IMG" >
+                </div>
+                <div class="card-body">
+                    <h3>{{i.name}}</h3>
+                    <p>{{i.discription}}</p>
+                    <h2><a href="{{i.name}}">{{i.name}}</a></h2>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+   </div>
+</div>
+</body>
+  {% endblock %}
+  

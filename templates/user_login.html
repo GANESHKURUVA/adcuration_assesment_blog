@@ -1,0 +1,57 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+<title>USER LOGIN</title>
+
+{% endblock %}
+
+<body>
+{% block body_block %}
+
+<style>
+    form
+    {
+        background-color: rgb(37, 39, 148);
+        height: 200px;
+        width: 300px;
+        padding:5px;
+        border-radius: 0px 10px 0px 10px;
+        opacity: 70%;
+
+
+    }
+    label
+    {
+        color: black;
+    }
+
+    h1
+   {
+    background: rgb(24, 103, 223);
+    color: black;
+    margin-top: 10px;
+   }
+   body{
+    background-image: url('https://wallpaperaccess.com/full/1900857.jpg');
+    background-size: cover;
+   }
+  
+</style>
+
+    <center>
+        <h1>LOGIN-PAGE</h1>
+        <br><br>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="username">username</label>
+            <input type="text" name="username" id="username"><br><br>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+            <br><br>
+            <input type="submit" value="Login" class="btn btn-primary">
+        </form>
+    </center>
+
+{% endblock %}
+</body>
